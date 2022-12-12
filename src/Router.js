@@ -10,9 +10,24 @@ function Router(){
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="CategoriesScreen" component={Categories}/>
-        <Stack.Screen name="MealsScreen" component={Meals}/>
-        <Stack.Screen name="DetailScreen" component={Detail}/>
+        <Stack.Screen name="CategoriesScreen" component={Categories}
+        options={{
+          title:"Categories",
+          headerTitleStyle:{color:"orange",},
+          headerTitleAlign:'center',
+        }}/>
+        <Stack.Screen name="MealsScreen" component={Meals}          
+        options={{
+          title:"Meals",
+          headerTitleStyle:{color:"orange",},
+          headerTitleAlign:'center',
+        }}/>
+        <Stack.Screen name="DetailScreen" component={Detail}        
+        options={{
+          title:"Detail",
+          headerTitleStyle:{color:"orange",},
+          headerTitleAlign:'center',
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

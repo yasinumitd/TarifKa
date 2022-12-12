@@ -1,12 +1,15 @@
 import React from "react";
-import { View,Text,Image } from "react-native"; 
+import { View,Text,Image,TouchableWithoutFeedback } from "react-native"; 
 import styles from './MealCard.style'
-function MealCard({meal}){
+function MealCard({meal, onSelect}){
     return(
-        <View style={styles.container}>
-            <Image style={styles.image} source={{uri: meal.strMealThumb}}/>
-            <Text style={styles.text}> {meal.strMeal}</Text>
-        </View>
+        <TouchableWithoutFeedback onPress={onSelect}>
+            <View style={styles.container}>
+                <Image style={styles.image} source={{uri: meal.strMealThumb}}/>
+                <Text style={styles.text}> {meal.strMeal}</Text>
+            </View>
+        </TouchableWithoutFeedback>
+        
     )
 }
 
